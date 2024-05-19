@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 const port = 5000;
 
-mongoose.connect('', {
+mongoose.connect('mongodb+srv://veepthyofficial:r2tn4LmBPS5maMIY@cluster0.91fa7sr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -98,6 +98,32 @@ app.post('/api/v', async (req, res) => {
       const vehicle = new Vehicle({ sname, vname, speed, x, y, direction });
       await vehicle.save();
       res.status(200).json({ message: 'Scenario added successfully' });
+    } catch (error) {
+      console.error('Internal Server Error:', error);
+      res.status(500).json({ message: 'Internal Server Error', error: error.message });
+    }
+  });
+
+  app.post('/api/uv', async (req, res) => {
+    const { vid,sname, vname, speed, x, y, direction } = req.body;
+    // console.log(name+" "+time);
+
+    if (!vid || !sname || !vname || !speed || !x || !y || !direction) {
+        return res.status(400).json({ message: 'Field are required are required' });
+      }
+    
+    try {
+      const vehicle = new Vehicle.findOne({_id:vid});
+      if(vehicle){
+        vehicle.sname=sname;
+        vehicle.vname=vname;
+        vehicle.speed=speed;
+        vehicle.x=x;
+        vehicle.y=y;
+        vehicle.direction=direction;
+      await vehicle.save();
+      res.status(200).json({ message: 'updated vehicle successfully' });
+      }else return res.status(400).json({ message: 'failed to update vehicle' });
     } catch (error) {
       console.error('Internal Server Error:', error);
       res.status(500).json({ message: 'Internal Server Error', error: error.message });
