@@ -1,0 +1,55 @@
+
+  .grid-container{
+    height: 600px;
+    width: 1000px;
+    background-image: url("https://w0.peakpx.com/wallpaper/106/993/HD-wallpaper-grid-black-dark-gray-green-line-square-texture-thumbnail.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 1rem;
+    border: 3px solid green;
+  }
+
+  .grid-container p{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+    color: black;
+    background-color: greenyellow;
+  }
+
+  .scenario .select{
+    margin-left: 1rem;
+  }
+  .scenario select{
+    height: 30px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    background-color: rgb(100, 98, 98);
+    color: white;
+  }
+  .scenario thead tr{
+    background-color: rgb(89, 86, 86);
+  }
+  
+  .scenario tbody tr{
+    background-color: white;
+    color: black;
+  }
+
+  .scenario .start,.scenario .stop{
+    margin: 3px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .scenario .start{
+    background-color: rgb(32, 232, 28);
+    color: white;
+  }
+  .scenario .stop{
+    background-color: rgb(46, 164, 218);
+    color: white;
+  }
+  

@@ -1,0 +1,104 @@
+.sidebar{
+    background-color: rgb(215, 237, 241);
+}
+.sidebar .link{
+    margin-left: 20px ;
+    width: 100%;
+}
+.data{
+    background-color: black;
+    color: white;
+}
+
+.addv,.alls,.adds,.allv{
+    margin: 3rem;
+}
+.addv select{
+    height: 30px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    background-color: rgb(63, 61, 61);
+    color: white;
+    margin: 5px;
+}
+.alls select,.allv select{
+    height: 3rem;
+    width: 14rem;
+    border: 2px solid rgb(120, 120, 122);
+    border-radius: 5px;
+    background-color: rgb(36, 35, 35);
+    color: white;
+    margin-left:3rem;
+}
+.adds .form{
+    background-color:  rgb(63, 61, 61);
+    /* text-align: center;
+    align-items: center; */
+}
+.adds .form-div{
+    width: fit-content;
+    display: flex;
+    margin: 2rem auto;
+}
+.addv p{
+    margin: 0;
+}
+.adds p,.alls p{
+    margin: 0 5rem;
+}
+.addv .form{
+    background-color: rgb(37, 37, 37);
+    text-align: center;
+    margin: 0 auto;
+}
+.addv .form div,.alls .form-div div{
+    margin: 10px;
+}
+.addv input{
+    height: 25px;
+    border: 2px solid rgb(120, 120, 122);
+    border-radius: 5px;
+    background-color: rgb(36, 35, 35);
+    color: white;
+    margin: 10px;
+}
+
+.adds input,.alls input{
+    height: 3rem;
+    width: 14rem;
+    border: 2px solid rgb(120, 120, 122);
+    border-radius: 5px;
+    background-color: rgb(36, 35, 35);
+    color: white;
+    margin: 10px 5rem;
+}
+
+.addv button,.alls button, .adds button{
+    border: none;
+    margin: 5px;
+    border-radius: 3px;
+}
+.alls .buttons{
+    float: inline-end;
+}
+.addv .add, .alls .goback,.adds .add{
+    background-color: rgb(32, 232, 28);
+    color: white;
+}
+
+.addv .reset,.alls .reset, .adds .reset{
+    background-color: rgb(255, 132, 0);
+    color:white;
+}
+.addv .goback,.alls .add,.adds .goback{
+    background-color: rgb(46, 164, 218);
+    color: white;
+}
+
+.alls thead tr{
+    background-color: rgb(89, 86, 86);
+}
+.alls tbody tr{
+    background-color: white;
+    color: black;
+}
