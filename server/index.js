@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 const port = 5000;
 
-mongoose.connect('mongodb+srv://veepthyofficial:r2tn4LmBPS5maMIY@cluster0.91fa7sr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect('', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
