@@ -188,6 +188,19 @@ app.delete('/api/s/:id', async (req, res) => {
     res.status(500).json({ message: 'Internal Server Error', error: error.message });
   }
 });
+app.delete('/api/s', async (req, res) => {
+  try {
+    const result = await Scenario.deleteMany({});
+    if (result.deletedCount > 0) {
+      res.status(200).json({ message: 'All Scenarios deleted successfully' });
+    } else {
+      res.status(400).json({ message: 'No scenarios found to delete' });
+    }
+  } catch (error) {
+    console.error('Internal Server Error:', error);
+    res.status(500).json({ message: 'Internal Server Error', error: error.message });
+  }
+});
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
